@@ -98,10 +98,27 @@ $Variable = 'Une autre variable';
 
 // -------------------------- HTML avec du PHP à l'intérieur  ---------------------------------
 
-$titre = "Les fruits";
+//$titre = "Les fruits";
 ?>
 
-<h2><?php echo $titre ?></h2>
-<h2><?= $titre ?></h2>
+<!-- <h2><?php echo $titre ?></h2>
+<h2><?= $titre ?></h2> -->
 
 
+
+
+
+
+
+<?php
+
+$data1 = "Hello";
+$data2 = "planete";
+$data3 = "Mars";
+$data4 = "les terriens";
+
+// Afficher la phrase suivante dans un paragraphe : 
+// Hello, les terriens. Je viens de la planete Mars.
+
+$result = "<p>" . $data1 . ', ' . $data4 . ". Je viens de la " . $data2 . ' ' . $data3 . ".</p>";
+echo $result;
