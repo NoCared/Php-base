@@ -129,9 +129,9 @@ $Variable = 'Une autre variable';
 
 // //print_r et var_dump affiche les éléments du tableau
 // $tableau = ['groupe', 34, 5.78, false, [1,2,3]];
-// // echo "<pre>";
-// // print_r( $tableau);
-// // echo "</pre>";
+// echo "<pre>";
+// print_r( $tableau);
+// echo "</pre>";
 
 // echo "<pre>";
 // var_dump( $tableau);
@@ -140,6 +140,26 @@ $Variable = 'Une autre variable';
 
 
 
-echo "Test";
-die();
-echo "Test2";
+// //Permet de kill le process
+// echo "Test";
+// die();
+// echo "Test2";
+
+
+
+
+
+// // Constantes
+// define('USER','Jon Doe');
+// echo USER;
+
+// define('TABLEAU', ['client',4,true,4.8]);
+// var_dump(TABLEAU);
+
+
+
+
+
+////Variables superglobales
+//var_dump($GLOBALS);
+//var_dump($_SERVER);
