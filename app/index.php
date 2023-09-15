@@ -72,6 +72,7 @@ $Variable = 'Une autre variable';
 
 
 
+
 // // Le point permet de concacténer des chaines de caractères
 // $fruit1 = 'pomme';
 // $fruit2 = 'banane';
@@ -80,3 +81,27 @@ $Variable = 'Une autre variable';
 // echo "$fruit1" . " " . "$fruit2";
 // echo '<br>';
 // echo "<p>$fruit1" . " " . "$fruit2</p>";
+// echo '<br>';
+// echo "<p>$fruit1" . "<br>" . "$fruit2</p>";
+
+
+
+
+// //operateur devant l'égal
+// $resultat = 'bla';
+// $resultat .= 'blo';
+// echo $resultat;
+
+
+
+
+
+// -------------------------- HTML avec du PHP à l'intérieur  ---------------------------------
+
+$titre = "Les fruits";
+?>
+
+<h2><?php echo $titre ?></h2>
+<h2><?= $titre ?></h2>
+
+
