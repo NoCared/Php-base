@@ -140,6 +140,13 @@ $Variable = 'Une autre variable';
 
 
 
+// $client = 'Jane Done';
+// $formation = 'Architecte';
+
+// echo "$client suit une formation de $formation";
+
+
+
 // //Permet de kill le process
 // echo "Test";
 // die();
