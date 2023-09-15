@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  web:
+    #build:
+      #dockerfile: php.Dockerfile
+      #context: .
+    image: docker.io/php:8.2-apache
+    restart: always
+    volumes:
+      - "./app/:/var/www/html/"
+    ports:
+      - "8003:80"
