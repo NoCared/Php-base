@@ -37,6 +37,7 @@ $Variable = 'Une autre variable';
 
 
 
+
 // //DIfférentes façons d'écrire le résultat
 //$nb = '5';
 // echo $nb;
@@ -47,9 +48,11 @@ $Variable = 'Une autre variable';
 
 
 
+
 // //Var dump affiche le type de la variable
 // $nb = 5;
 // var_dump($nb);
+
 
 
 
@@ -62,7 +65,18 @@ $Variable = 'Une autre variable';
 
 
 
+
 // $camelCase = 'Une variable en camelCase';
 // $snake_case = 'Une variable en snake_case';
 // $PascalCase = 'Une variable en PascalCase';
 
+
+
+// // Le point permet de concacténer des chaines de caractères
+// $fruit1 = 'pomme';
+// $fruit2 = 'banane';
+// echo "$fruit1" . "$fruit2";
+// echo '<br>';
+// echo "$fruit1" . " " . "$fruit2";
+// echo '<br>';
+// echo "<p>$fruit1" . " " . "$fruit2</p>";
