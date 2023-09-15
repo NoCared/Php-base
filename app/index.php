@@ -209,35 +209,36 @@ $Variable = 'Une autre variable';
 // Calculer l'age d'une personne en fonction de son année de naissance
 //En utilisant la fonction date
 
-// $annee = 2023;
+ $annee = 1999;
 
-// $age = date("Y") - $annee;
+ $age = date("Y") - $annee;
 // echo $age;
 
 // echo "<br>";
 
-// $age = mktime(0,0,0,0,0,$annee);
-// $current = mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("y"));
-// $age = $current - $age;
-// $year = intdiv($age, 31536000);
-// $age -= $year * 31536000;
-// echo "Annees : $year <br>";
-// $month = intdiv($age, 2629800 );
-// $age -= $month * 2629800 ;
-// echo "Mois : $month <br>";
-// $week = intdiv($age, 604800);
-// $age -= $week * 604800;
-// echo "Semaines : $week <br>";
-// $day = intdiv($age, 86400);
-// $age -= $day * 86400;
-// echo "Jours : $day <br>";
-// $hour = intdiv($age, 3600);
-// $age -= $hour * 3600;
-// echo "Heures : $hour <br>";
-// $min = intdiv($age ,60);
-// $age -= $min * 60;
-// echo "Minutes : $min <br>";
-// echo "Seconds $age";
+$annee = 1999;
+$age = mktime(0,0,0,1,22,$annee);
+$current = mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("y"));
+$age = $current - $age;
+$year = intdiv($age, 31536000);
+$age -= $year * 31536000;
+echo "Annees : $year <br>";
+$month = intdiv($age, 2629800 );
+$age -= $month * 2629800 ;
+echo "Mois : $month <br>";
+$week = intdiv($age, 604800);
+$age -= $week * 604800;
+echo "Semaines : $week <br>";
+$day = intdiv($age, 86400);
+$age -= $day * 86400;
+echo "Jours : $day <br>";
+$hour = intdiv($age, 3600);
+$age -= $hour * 3600;
+echo "Heures : $hour <br>";
+$min = intdiv($age ,60);
+$age -= $min * 60;
+echo "Minutes : $min <br>";
+echo "Seconds $age";
 
 
 
