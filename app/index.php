@@ -112,13 +112,54 @@ $Variable = 'Une autre variable';
 
 <?php
 
-$data1 = "Hello";
-$data2 = "planete";
-$data3 = "Mars";
-$data4 = "les terriens";
+// $data1 = "Hello";
+// $data2 = "planete";
+// $data3 = "Mars";
+// $data4 = "les terriens";
 
-// Afficher la phrase suivante dans un paragraphe : 
-// Hello, les terriens. Je viens de la planete Mars.
+// // Afficher la phrase suivante dans un paragraphe : 
+// // Hello, les terriens. Je viens de la planete Mars.
 
-$result = "<p>" . $data1 . ', ' . $data4 . ". Je viens de la " . $data2 . ' ' . $data3 . ".</p>";
-echo $result;
+// $result = "<p>" . $data1 . ', ' . $data4 . ". Je viens de la " . $data2 . ' ' . $data3 . ".</p>";
+// echo $result;
+
+
+
+
+
+// //print_r et var_dump affiche les éléments du tableau
+// $tableau = ['groupe', 34, 5.78, false, [1,2,3]];
+// echo "<pre>";
+// print_r( $tableau);
+// echo "</pre>";
+
+// echo "<pre>";
+// var_dump( $tableau);
+// echo "</pre>";
+
+
+
+
+// //Permet de kill le process
+// echo "Test";
+// die();
+// echo "Test2";
+
+
+
+
+
+// // Constantes
+// define('USER','Jon Doe');
+// echo USER;
+
+// define('TABLEAU', ['client',4,true,4.8]);
+// var_dump(TABLEAU);
+
+
+
+
+
+////Variables superglobales
+//var_dump($GLOBALS);
+//var_dump($_SERVER);
