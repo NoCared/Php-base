@@ -50,8 +50,8 @@ function CalcPrixTTC(float $ht,float $tva) : float
 //----------
 
 
-// fonction interne à php
-$article = "Je lis un article.";
+// // fonction interne à php
+// $article = "Je lis un article.";
 
 
 // //Inverser chaine de caractères
@@ -82,18 +82,18 @@ $article = "Je lis un article.";
 
 //---------------
 
-$x = 5;
-$y =3;
+// $x = 5;
+// $y =3;
 
-function calcul2(int $x) :int
-{
-    global $y;
-    $y = 7;
-    return $x + $y;
-}
-// echo calcul2(5);
-// dd($y);
+// function calcul2(int $x) :int
+// {
+//     global $y;
+//     $y = 7;
+//     return $x + $y;
+// }
+// // echo calcul2(5);
+// // dd($y);
 
-global $z;
-$z = 'Le monde';
-echo "hello " . $GLOBALS['z'];
+// global $z;
+// $z = 'Le monde';
+// echo "hello " . $GLOBALS['z'];
