@@ -1,6 +1,6 @@
 <?php
 
-$villes = [
+return $villes = [
     [
         'nom' => 'Paris',
         'codePostal' => '75000',
