@@ -53,23 +53,47 @@ function CalcPrixTTC(float $ht,float $tva) : float
 // fonction interne à php
 $article = "Je lis un article.";
 
-//Inverser chaine de caractères
-//strrev
-//Longueur d'une chaine de caractère
-//strlen
-//Transforme une chaine de caractère en majuscule
-//strtouper
-//Remplace un élément dans une chaine de caractère
-// ----> remplace 'un' par 'cet'
-//str_replace
-//Remplace un segment dans une chaine de caractère
-// ----> renvoyer les 6 premiers éléments de la chaine de caractère
-//substr
 
-$article = str_replace('un','cet',$article,$count);
+// //Inverser chaine de caractères
+// //strrev
 
-echo $article . " " . $count . "<br>";
+// //Longueur d'une chaine de caractère
+// //strlen
 
-$article = substr($article,0,6);
+// //Transforme une chaine de caractère en majuscule
+// //strtoupper
 
-echo $article . "<br>";
+// //Remplace un élément dans une chaine de caractère
+// // ----> remplace 'un' par 'cet'
+// //str_replace
+
+// //Remplace un segment dans une chaine de caractère
+// // ----> renvoyer les 6 premiers éléments de la chaine de caractère
+// //substr
+
+// $article = str_replace('un','cet',$article,$count);
+
+// echo $article . " " . $count . "<br>";
+
+// $article = substr($article,0,6);
+
+// echo $article . "<br>";
+
+
+//---------------
+
+$x = 5;
+$y =3;
+
+function calcul2(int $x) :int
+{
+    global $y;
+    $y = 7;
+    return $x + $y;
+}
+// echo calcul2(5);
+// dd($y);
+
+global $z;
+$z = 'Le monde';
+echo "hello " . $GLOBALS['z'];
