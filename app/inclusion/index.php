@@ -27,14 +27,13 @@
 
     ?>
     <main>
+
         <section>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta harum reiciendis, cum repudiandae velit placeat aut nihil tempore quidem libero molestias odio praesentium perspiciatis ipsa voluptatum in qui saepe illo!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta harum reiciendis, cum repudiandae velit placeat aut nihil tempore quidem libero molestias odio praesentium perspiciatis ipsa voluptatum in qui saepe illo!
-            </p>
+
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto corporis ducimus, quod itaque ab reiciendis corrupti fuga ipsam sapiente maiores repellat blanditiis consequuntur excepturi voluptates cumque nemo! Voluptatibus, magni doloremque!
+
         </section>
+
     </main>
 
     <?php
