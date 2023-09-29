@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,13 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <main>
         <h1>Formulaire</h1>
 
-        <form action="" method="">
+        <form action="./traitement.php" method="POST">
             <div>
                 <label for="nom">Nom :</label>
                 <input type="text" name="nom" id="nom">
@@ -19,7 +22,7 @@
 
             <div>
                 <label for="email">Email :</label>
-                <input type="text" name="email" id="email">
+                <input type="email" name="email" id="email">
             </div>
 
             <div>
