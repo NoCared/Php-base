@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +31,20 @@
             <div>
                 <label for="commentaire">Commentaire :</label>
                 <textarea name="commentaire" id="commentaire" cols="30" rows="10"></textarea>
+            </div>
+
+            <div>
+                <label for="competences">Compétences</label>
+                <input type="checkbox" name="competence[]" value="php" id="php">PHP
+                <input type="checkbox" name="competence[]" value="python" id="python">PYTHON
+                <input type="checkbox" name="competence[]" value="html" id="html">HTML
+            </div>
+
+            <div>
+                <label for="niveau">Niveau</label>
+                <input type="radio" name="niveau" id="debutant" value="debutant">Débutant
+                <input type="radio" name="niveau" id="intermediaire" value="intermediaire">Intermédiaire
+                <input type="radio" name="niveau" id="expert" value="expert">Expert
             </div>
 
             <div>
