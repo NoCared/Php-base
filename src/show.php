@@ -9,4 +9,5 @@ $queryArticle = 'SELECT * from post where id=' . $id;
 
 $article = $db->query($queryArticle)->fetch();
 
-dd($article);
+
+require './views/show.view.php';
