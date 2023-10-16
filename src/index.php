@@ -1,57 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
-    <link rel="stylesheet" href="./formulaire/style.css">
-</head>
 
-<body>
-    <main>
-        <h1>Formulaire</h1>
 
-        <form action="./formulaire/traitement.php" method="POST">
-            <div>
-                <label for="nom">Nom :</label>
-                <input type="text" name="nom" id="nom">
-            </div>
+// ------------------------------- CLASS -------------------------------
 
-            <div>
-                <label for="email">Email :</label>
-                <input type="email" name="email" id="email">
-            </div>
+// class Person {
+//     //attributs (variables)
+//     public $nom;
+//     public $age;
 
-            <div>
-                <label for="titre">Titre :</label>
-                <input type="text" name="titre" id="titre">
-            </div>
+//     //methodes (fonctions)
+//     public function courir()
+//     {
+//         echo $this->nom . " court lentement !";
+//     }
+// }
 
-            <div>
-                <label for="commentaire">Commentaire :</label>
-                <textarea name="commentaire" id="commentaire" cols="30" rows="10"></textarea>
-            </div>
+// $person1 = new Person();
+// $person1->nom = 'Jon doe';
+// $person1->age = 30;
+// $person1->courir();
+// dd($person1);
 
-            <div>
-                <label for="competences">Compétences</label>
-                <input type="checkbox" name="competence[]" value="php" id="php">PHP
-                <input type="checkbox" name="competence[]" value="python" id="python">PYTHON
-                <input type="checkbox" name="competence[]" value="html" id="html">HTML
-            </div>
 
-            <div>
-                <label for="niveau">Niveau</label>
-                <input type="radio" name="niveau" id="debutant" value="debutant">Débutant
-                <input type="radio" name="niveau" id="intermediaire" value="intermediaire">Intermédiaire
-                <input type="radio" name="niveau" id="expert" value="expert">Expert
-            </div>
+require './database.php';
 
-            <div>
-                <input type="submit" value="Envoyer">
-            </div>
-        </form>
-    </main>
-</body>
+$db = new Database();
+$articles = $db->query('SELECT * FROM post')->fetchAll(PDO::FETCH_ASSOC);
 
-</html>
+
+include './views/index.view.php';
+
+?>
+
+
+
