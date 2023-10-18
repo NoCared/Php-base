@@ -3,7 +3,7 @@ include 'partials/header.php';
 ?>
 
 <main>
-<h1>Not found 404 !</h1>
+    <h2><?= $heading ?></h2>
 </main>
 
 <?php
