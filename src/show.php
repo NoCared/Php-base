@@ -1,13 +1,13 @@
 <?php
-
-require './database.php';
+include './fonctions.php';
+require './Database.php';
 
 $db = new Database();
+
 $id = $_GET['id'];
 
-$queryArticle = 'SELECT * from post where id = :id';
+$queryArticle = 'SELECT * FROM post where id = :id';
 
 $article = $db->query($queryArticle, [':id' => $id])->fetch();
 
-
-require './views/show.view.php';
+include './views/show.view.php';

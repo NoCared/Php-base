@@ -8,6 +8,6 @@ zip \
 sqlite \
 unzip 
 
-RUN docker-php-ext-install pdo pdo_mysql mysqli
+RUN docker-php-ext-install pdo pdo_mysql
 
 WORKDIR /var/www
