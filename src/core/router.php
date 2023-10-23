@@ -36,6 +36,6 @@ function abort($code = 404)
 }
 
 
-$routes = require 'routes.php';
+$routes = require 'config/routes.php';
 
 routeToController($uriPath,$routes);
