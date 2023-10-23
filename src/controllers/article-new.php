@@ -3,13 +3,21 @@ require 'models/Database.php';
 $db = new Database();
 $heading = 'Nouvelle recette';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $titre = filter_var($_POST['titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $contenu = filter_var($_POST['contenu'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$errors = [];
 
-    if (empty($titre) || empty($contenu)) {
-        echo 'Champ titre ou contenu vide';
-    } else {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $titre = cleanData($_POST['titre']);
+    $contenu = cleanData($_POST['contenu']);
+    if (strlen($titre) === 0 ) {
+        $errors[] = 'Champ titre vide';
+    }
+    if (strlen($contenu) === 0)
+    {
+        $errors[] = 'Champ contenu vide';
+    }
+
+    if (empty($errors)) {
+
         $db->query('INSERT INTO post (titre, contenu) VALUES (:titre, :contenu)', [
             'titre' => $titre,
             'contenu' => $contenu
@@ -22,5 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 view('article-new', [
-    'heading' => $heading
+    'heading' => $heading,
+    'errors' => $errors
 ]);

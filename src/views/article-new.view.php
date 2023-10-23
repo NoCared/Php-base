@@ -1,4 +1,4 @@
-<h2><?= $model['heading']?></h2>
+<h2><?= $model['heading'] ?></h2>
 <section>
     <form method="POST">
         <label for="titre">Titre :</label>
@@ -6,4 +6,16 @@
         <textarea name="contenu" id="contenu" cols="30" rows="10"></textarea>
         <input type="submit" value="Ajouter">
     </form>
+
+    <p>
+        <?php if (isset($model['errors']) && !empty($model['errors'])) {
+            foreach ($model['errors'] as $error) { ?>
+
+            <p class="error">
+                <?=$error?>
+            </p>
+
+        <?php } 
+    } ?>
+</p>
 </section>

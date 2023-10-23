@@ -17,3 +17,8 @@ function view(string $name, string | array $model)
 {
     return require('views/layout.view.php');
 }
+
+function cleanData ($string)
+{
+    return trim(filter_var($string, FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+}
