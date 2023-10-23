@@ -7,10 +7,7 @@
         <input type="text" name="titre" id="titre">
 
 
-        <textarea name="contenu" id="contenu" cols="30" rows="10"><?php
-            if (isset($model['contenu'])) {
-            ?><?= $model['contenu'] ?><?php } ?>
-        </textarea>
+        <textarea name="contenu" id="contenu" cols="30" rows="10"><?php if (isset($model['contenu'])) { ?><?= $model['contenu'] ?><?php } ?> </textarea>
 
 
         <input type="submit" value="Ajouter">
