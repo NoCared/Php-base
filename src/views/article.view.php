@@ -3,10 +3,17 @@
 <p>Crée le : <?= $model['article']['created_at'] ?></p>
 
 <p>
+    | 
+    <a href="/article-modify?id=<?= $model['article']['id'] ?>" 
+    onClick="return confirm('Etes-vous certain de modifier cet article')">
+        Modifier cet article
+    </a>
+    | --------- | 
     <a href="/article-delete?id=<?= $model['article']['id'] ?>" 
     onClick="return confirm('Etes-vous certain de supprimer cet article')">
         Supprimer cet article
     </a>
+     | 
 </p>
 
 
