@@ -15,6 +15,7 @@ return [
     '/article' => 'controllers/article.php',
     '/article-new' => 'controllers/article-new.php',
     '/article-delete' => 'controllers/article-delete.php',
+    '/article-modify' => 'controllers/article-modify.php',
     '/contact' => 'controllers/contact.php',
     '/conditions' => 'controllers/conditions.php'
 ];
