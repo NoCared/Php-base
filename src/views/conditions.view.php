@@ -1,6 +1,3 @@
-<?php
-include 'partials/header.php';
-?>
 
 <main>
     <h2><?= $heading ?></h2>
@@ -15,7 +12,3 @@ include 'partials/header.php';
         <p>Fait par blabla</p>
 </main>
 
-
-<?php
-include 'partials/footer.php';
-?>
