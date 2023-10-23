@@ -1,14 +1,8 @@
-<?php
-include 'partials/header.php';
-?>
 
 <main>
-    <h3><?= $article['titre'] ?></h3>
-    <p><?= $article['contenu'] ?></p>
-    <p>Crée le : <?= $article['created_at'] ?></p>
+    <h3><?= $model['article']['titre'] ?></h3>
+    <p><?= $model['article']['contenu'] ?></p>
+    <p>Crée le : <?= $model['article']['created_at'] ?></p>
     <p><a href="/articles">Retour à la liste des articles</a></p>
 </main>
 
-<?php
-include 'partials/footer.php';
-?>
