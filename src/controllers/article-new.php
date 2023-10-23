@@ -4,6 +4,8 @@ $db = new Database();
 $heading = 'Nouvelle recette';
 
 $errors = [];
+$titre = '';
+$contenu = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titre = cleanData($_POST['titre']);
@@ -11,9 +13,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (strlen($titre) === 0 ) {
         $errors[] = 'Champ titre vide';
     }
+    else if (strlen($titre) >= 50)
+    {
+        $errors[] = 'Champ de titre trop grand';
+    }
+
     if (strlen($contenu) === 0)
     {
         $errors[] = 'Champ contenu vide';
+    }
+    else if (strlen($contenu) >= 1000)
+    {
+        $errors[] = 'Champ contenu dépasse les 1000 caractères';
     }
 
     if (empty($errors)) {
@@ -31,5 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 view('article-new', [
     'heading' => $heading,
+    'titre' => $titre,
+    'contenu' => $contenu,
     'errors' => $errors
 ]);

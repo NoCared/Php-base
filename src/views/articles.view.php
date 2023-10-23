@@ -8,6 +8,12 @@
 
                 <a href="/article?id=<?= $article['id'] ?>"><?= $article['titre'] ?>
                 </a>
+
+                <a href="/article-delete?id=<?= $article['id'] ?>" onClick="return confirm('Etes-vous certain de supprimer cet article')">
+                    <span class="redCross">
+                        <img src="public/assets/image/delete.png" alt="">
+                    </span>
+                </a>
             </li>
         <?php endforeach; ?>
     </ul>

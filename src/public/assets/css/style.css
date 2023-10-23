@@ -19,3 +19,11 @@ ul {
     font-weight: bold;
     padding: 1rem;
 }
+.redCross{
+    margin-left : .5rem;
+}
+
+.redCross img{
+    width: 1rem;
+    height: 1rem;
+}
