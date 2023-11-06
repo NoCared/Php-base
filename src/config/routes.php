@@ -17,5 +17,6 @@ return [
     '/article-delete' => 'controllers/article-delete.php',
     '/article-modify' => 'controllers/article-modify.php',
     '/contact' => 'controllers/contact.php',
-    '/conditions' => 'controllers/conditions.php'
+    '/conditions' => 'controllers/conditions.php',
+    '/dashboard' => 'controllers/admin/dashboard.php'
 ];
