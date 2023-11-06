@@ -13,5 +13,5 @@ if (! $article) {
     abort();
 }
 
-header('Location: /article/articles');
+header('Location: /articles');
 exit();

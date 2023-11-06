@@ -3,6 +3,8 @@ require 'models/Database.php';
 $db = new Database();
 
 $id = $_GET['id'];
+$usersRequest = 'SELECT * FROM user';
+$users = $db->query($usersRequest)->findAll();
 
 $queryArticle = 'SELECT * FROM post where id = :id';
 
@@ -21,6 +23,7 @@ $contenu = $article['contenu'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titre = cleanData($_POST['titre']);
     $contenu = cleanData($_POST['contenu']);
+    $user = cleanData($_POST['user']);
     if (strlen($titre) === 0 ) {
         $errors[] = 'Champ titre vide';
     }
@@ -39,14 +42,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (empty($errors)) {
-
-        $db->query('UPDATE post SET titre = :titre, contenu = :contenu WHERE id = :id', [
+        $db->query('UPDATE post SET titre = :titre, contenu = :contenu, user_id = :user WHERE id = :id', [
             'titre' => $titre,
             'contenu' => $contenu,
-            'id' => $id
+            'id' => $id,
+            'user' => $user
         ]);
 
-        header('Location: /article/articles');
+        header('Location: /articles');
         exit();
     }
 }
@@ -56,5 +59,7 @@ view('article/article-modify', [
     'heading' => $heading,
     'titre' => $titre,
     'contenu' => $contenu,
-    'errors' => $errors
+    'errors' => $errors,
+    'creator' => $article['user_id'],
+    'users' => $users
 ]);

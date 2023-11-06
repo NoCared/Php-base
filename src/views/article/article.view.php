@@ -1,6 +1,7 @@
 <h3><?= $model['article']['titre'] ?></h3>
 <p><?= $model['article']['contenu'] ?></p>
 <p>Crée le : <?= $model['article']['created_at'] ?></p>
+<p>Publié par : <?= $model['article']['nom'] ?></p>
 
 <p>
     | 

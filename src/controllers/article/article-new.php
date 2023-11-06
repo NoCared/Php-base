@@ -3,6 +3,9 @@ require 'models/Database.php';
 $db = new Database();
 $heading = 'Nouvelle recette';
 
+$usersRequest = 'SELECT * FROM user';
+$users = $db->query($usersRequest)->findAll();
+
 $errors = [];
 $titre = '';
 $contenu = '';
@@ -10,6 +13,7 @@ $contenu = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titre = cleanData($_POST['titre']);
     $contenu = cleanData($_POST['contenu']);
+    $user = cleanData($_POST['user']);
     if (strlen($titre) === 0 ) {
         $errors[] = 'Champ titre vide';
     }
@@ -29,12 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($errors)) {
 
-        $db->query('INSERT INTO post (titre, contenu) VALUES (:titre, :contenu)', [
+        $db->query('INSERT INTO post (titre, contenu, user_id) VALUES (:titre, :contenu, :user_id)', [
             'titre' => $titre,
-            'contenu' => $contenu
+            'contenu' => $contenu,
+            'user_id' => $user
         ]);
 
-        header('Location: /article/articles');
+        header('Location: /articles');
         exit();
     }
 }
@@ -44,5 +49,6 @@ view('article/article-new', [
     'heading' => $heading,
     'titre' => $titre,
     'contenu' => $contenu,
-    'errors' => $errors
+    'errors' => $errors,
+    'users' => $users
 ]);

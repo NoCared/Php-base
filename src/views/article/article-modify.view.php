@@ -11,7 +11,16 @@
 
         <textarea name="contenu" id="contenu" cols="30" rows="10"><?php if (isset($model['contenu'])) {?><?= $model['contenu'] ?><?php } ?></textarea>
 
-
+        <label for="user">Auteur :</label>
+        <select name="user" id="user">
+            <option value="">---</option>
+            <?php foreach ($model['users'] as $user) { ?>
+            <option value="<?=$user['id']?>" 
+            <?= $user['id'] === $model['creator'] ? 'selected':'';?>>
+            <?=$user['nom']?>
+        </option>
+            <?php } ?>
+        </select>
         <input type="submit" value="Ajouter">
     </form>
 
