@@ -10,4 +10,11 @@ $obj = new Test();
 // echo $obj->displayVar('');
 // echo $obj->displayVar('blabla');
 
-echo $obj::PI;
+// echo $obj::PI;
+// echo $obj->calculAire();
+
+// $obj->rayon = 12;
+// echo $obj->calculAire() . ' cm²';
+
+// echo Test::$var4;
+echo Test::staticFonc();
