@@ -1,7 +1,8 @@
 <?php
 require 'Test.php';
+require 'Model.php';
 
-$obj = new Test();
+// $obj = new Test();
 
 //echo $obj->var1;
 //echo $obj->var2;
@@ -17,4 +18,15 @@ $obj = new Test();
 // echo $obj->calculAire() . ' cm²';
 
 // echo Test::$var4;
-echo Test::staticFonc();
+// echo Test::staticFonc();
+
+
+//$objHerite = new TestHerite();
+
+// echo $objHerite->getVar();
+
+// $user = new Model();
+// var_dump($user);
+
+$obj3 = new AbstractClassHerite();
+$obj3->appelleUneMethode();
