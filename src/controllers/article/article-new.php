@@ -34,13 +34,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'contenu' => $contenu
         ]);
 
-        header('Location: /articles');
+        header('Location: /article/articles');
         exit();
     }
 }
 
 
-view('article-new', [
+view('article/article-new', [
     'heading' => $heading,
     'titre' => $titre,
     'contenu' => $contenu,

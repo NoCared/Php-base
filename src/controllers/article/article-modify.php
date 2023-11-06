@@ -46,13 +46,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'id' => $id
         ]);
 
-        header('Location: /articles');
+        header('Location: /article/articles');
         exit();
     }
 }
 
 
-view('article-modify', [
+view('article/article-modify', [
     'heading' => $heading,
     'titre' => $titre,
     'contenu' => $contenu,
